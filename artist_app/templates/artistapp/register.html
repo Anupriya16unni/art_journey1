@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>art_journey</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'image/alogo.jpg' %}" height="100px"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/register.js' %}"></script>
+</head>
+<style>
+    * {
+  margin: 0
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #154a68;
+  padding: 20px;
+  width: 600px;
+  border-radius: 35px;
+  margin-top: 40px;
+  margin-left: 350px;
+  
+}
+
+.container h1 {
+  color: rgb(250, 246, 246);
+  font-family: 'Times New Roman', Times, serif;
+  margin: 20px;
+  padding-bottom: 10px;
+}
+
+.registartion-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif
+  
+  
+}
+
+.registartion-form input,
+.registartion-form select,
+.registartion-form textarea {
+  border: none;
+  padding: 5px;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.registartion-form input:focus,
+.registartion-form textarea:focus {
+  box-shadow: 3px 3px 10px rgb(228, 228, 228), -3px -3px 10px rgb(224, 224, 224);
+  
+}
+
+.registartion-form .submit {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 20px;
+  color: rgb(44, 44, 44);
+  background-color: #ffffff;
+  border-radius: 7px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.registartion-form .submit:hover {
+  box-shadow: 3px 3px 6px rgb(255, 214, 176);
+}
+input{
+
+  border-radius: 7px;
+  width: 250px;
+}
+
+#language{
+  border-radius: 7px;
+  width: 250px;
+}
+#about{
+  border-radius: 7px;
+  width: 250px;
+}
+
+p{
+  position: relative;
+  left: 150px;
+  color: red;
+  font-size: 15px;
+  display: none;
+}
+</style>
+<body>
+<div class="container">
+    <h1>Registration form</h1>
+    <form name="registration" class="registartion-form" >
+      <table>
+        <tr>
+          <td><label for="name">Name:</label></td>
+          <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <td><p id="p1">*Please enter yourname</p></td>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email"></td>
+        </tr>
+        <td><p id="p2">*Please enter your email </p></td>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" name="password" id="password"></td>
+        </tr>
+        <td><p id="p3">*Please enter your password</p></td>
+        <tr>
+          <td><label for="phoneNumber">Conform Password:</label></td>
+          <td><input type="password" name="cpassword" id="cpassword"></td>
+        </tr>
+        <td><p id="p4">*Re-enter enter your password </p></td>
+        <tr>
+          <td><label for="name">Qualification:</label></td>
+          <td><input type="text" name="qualification" id="qualification"></td>
+        </tr>
+        <td><p id="p5">*Enter your Qualification </p></td>
+        <tr>
+            <td><label for="language">Category:</label></td>
+            <td>
+              <select name="language" id="language">
+                <option value="">Choose your field </option>
+                <option value="Drawing">Drawing</option>
+                <option value="Painting">Painting</option>
+                <option value="Architecture">Architecture</option>
+              </select>
+            </td>
+          </tr>
+         
+          <tr>
+            <td><label for="about">About:</label></td>
+            <td><textarea name="about" id="about" placeholder="Write about yourself..."></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input id="reg" type="submit" class="submit" value="REGISTER" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    
+</body>
+</html>

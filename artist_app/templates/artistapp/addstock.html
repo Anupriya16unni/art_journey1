@@ -1,0 +1,150 @@
+{% extends "artistapp/artist_master.html" %}
+{% load static %}
+{% block artist_content %}
+
+<style>
+    h1{
+      font-family: 'Times New Roman', Times, serif;
+      background: #121FCF;
+      background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+      background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+      background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      padding-top: 15px;
+      font-weight: bolder;
+      margin-bottom: 30px;
+}
+    * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.screen {		
+	background: linear-gradient(90deg, #e1e1e6, #7C78B8);		
+	position: relative;	
+	height: 450px;
+	width: 800px;
+  margin-bottom: 150px;	
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+/* .screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+} */
+
+/* .screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+} */
+
+/* .screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+} */
+
+/* .screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+} */
+
+/* .screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #6C63AC;	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+} */
+
+/* .screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+} */
+
+/* .screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #7E7BB9;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+} */
+
+</style>
+
+<div class="container">
+  
+	<div class="screen">
+		<div class="screen__content">
+      <h1>GALLERIA</h1>
+			
+		</div>
+      <div>
+        <form action="">
+          <table>
+            <tr>
+              <td><label for="" >Product Name : </label></td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td><label for="">Product Rate : </label></td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td><label for="">Product details</label></td>
+              <td><textarea name="" id="" style="width: 190px;"></textarea> </td>
+            </tr>
+            <tr>
+              <td><label for="formFile" class="form-label">Upload picture </label></td>
+              <td><input class="form-control" type="file" id="formFile"></td>
+            </tr>
+          <tr>
+            <td><a id="btn1" class="btn btn-primary" href="">Upload</a></td>
+          </tr>  
+      </table>
+        </form>
+      </div>
+      
+    </div>
+		<!-- <div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		 -->
+	</div>
+</div>
+
+
+{% endblock %}

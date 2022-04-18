@@ -1,0 +1,52 @@
+{% extends 'adminapp/admin_master.html' %}
+{% load static %}
+{% block admin_content %}
+<link rel="stylesheet" href="{% static 'css/message.css' %}">
+<style>
+    h1{
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;   
+    padding-top: 40px   ; 
+}
+.table{
+    margin-top: 60px;
+    background-color: rgba(255, 253, 253, 0.4);
+    width: 800px;
+    margin-left: 49px;
+}
+</style>
+
+<h1>MESSAGES</h1>
+<table class="table shadow">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Email</th>
+        <th scope="col">Massage</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>athirac1503@gmail.com</td>
+        <td>site was blocked in 2 hours</td>
+        <td><a class="btn btn-dark" href="{% url 'reply' %}">view</a></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>anu1567@gmail.com</td>
+        <td>can't reach the site</td>
+        <td><a class="btn btn-dark" href="{% url 'reply' %}">view</a></td>
+      </tr>
+      <tr> <th scope="row">3</th>
+        <td>sree1503@gmail.com</td>
+        <td>I can't see my drawings</td>
+        <td><a class="btn btn-dark" href="{% url 'reply' %}">view</a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+{% endblock %}

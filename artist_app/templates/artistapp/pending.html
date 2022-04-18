@@ -1,0 +1,65 @@
+{% extends "artistapp/artist_master.html" %}
+{% load static %}
+{% block artist_content %}
+
+<style>
+    .h1{
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    
+</style>
+
+<div class="pending">
+    <div>
+        <h1 class="h1">Pending Work</h1>
+      <table class="table shadow">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">User Name</th>
+              <th scope="col">Ordered date</th>
+              <th scope="col">Last date</th>
+              <th colspan="2" scope="col">Status</th>
+      
+      
+          </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th scope="row">1</th>
+                  <td>Anupriya</td>
+                  <td>5/4/2022 9:09:31 AM</td>
+                  <td>2/5/2022 9:09:31 AM</td>
+                  <td ><a  class="btn btn-primary" style="width: 80px;" href="">Edit</a></td>
+                  <td ><a  class="btn btn-danger" href="">Delete</a></td>
+                </tr>
+          
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Athira</td>
+                  <td>10/4/2022 12:10:41 AM</td>
+                  <td>28/4/2022 12:10:41 AM</td>
+                  <td ><a  class="btn btn-primary" style="width: 80px;" href="">Edit</a></td>
+                  <td ><a  class="btn btn-danger" href="">Delete</a></td>
+                </tr>
+          
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Neethu</td>
+                  <td>12/4/2022 7:09:31 AM</td>
+                  <td>5/5/2022 7:09:31 AM</td>
+                  <td ><a  class="btn btn-primary" style="width: 80px;" href="">Edit</a></td>
+                  <td ><a  class="btn btn-danger" href="">Delete</a></td>
+                </tr>
+              
+              </tbody>
+          </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

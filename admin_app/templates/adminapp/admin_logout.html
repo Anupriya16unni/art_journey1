@@ -1,0 +1,45 @@
+{% extends 'adminapp/admin_master.html' %}
+{% load static %}
+{% block admin_content %}
+<style>
+    h1{
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;   
+    padding-top: 40px   ; 
+}
+.img1{
+    margin-left: 370px;
+    margin-top: 20px;
+}
+.btn{
+    color: #fff;
+    background-color: black;
+    margin-top: 40px;
+    width: 200px;
+    font-weight: bold;
+}
+.btn:hover{
+    color: black;
+    background-color: #fff;
+    border: solid 2px black;
+}
+h4{
+    margin-top: 20px;
+}
+</style>
+<!-- <link rel="stylesheet" href="{% static 'css/log.css' %}"> -->
+
+<h1>LOG OUT</h1>
+<div >
+  <img class="img1" src="{% static 'images/logout1.png' %}" alt="" width="150px">
+ <center>
+  <h4>
+      Oh no! You're  leaving...... <br>Are you sure?
+  </h4>
+  <a class="btn btn-light" href="">Yes</a>
+  <a class="btn btn-light" href="">No</a>
+ </center>
+</div>
+
+{% endblock %}

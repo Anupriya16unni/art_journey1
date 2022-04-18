@@ -1,0 +1,49 @@
+{% extends 'userapp/user_master.html' %}
+{% load static %}
+{% block user_content %}
+
+<style>
+    .draw{
+        text-align: center;
+        margin-top: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+        background: #121FCF;
+      background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+      background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+      background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  /* h2{
+    margin-left: ;
+  }
+    */
+</style>
+
+<div class="draw">
+    <h1>DRAWINGS</h1>
+</div>
+
+<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col shadow">
+      <div class="card">
+          <h2>PENCIL DRAWING</h2>
+        <img height="400px" src="{% static 'image/pencil.jpg' %}" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col shadow">
+      <div class="card">
+          <h2>STENCIL DRAWING</h2>
+        <img height="400px" src="{% static 'image/st.jfif' %}" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col shadow">
+      <div class="card">
+          <h2>MANDALA ART</h2>
+        <img height="400px" src="{% static 'image/md.jfif' %}" class="card-img-top" alt="...">
+      </div>
+    </div>
+  </div> -->
+
+{% endblock %}
