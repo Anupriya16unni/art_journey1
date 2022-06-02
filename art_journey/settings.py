@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user_app',
     'artist_app',
-    'admin_app',
-    'seller_app'
+    'admin_app'
 ]
 
 MIDDLEWARE = [
@@ -81,8 +80,12 @@ WSGI_APPLICATION = 'art_journey.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db_art',
+        'USER':'postgres',
+        'PASSWORD':'root',
+        'HOST':'localhost',
+        'PORT':'5432',
     }
 }
 
@@ -125,9 +128,11 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS =[
      os.path.join (BASE_DIR,'user_app/static'),
      os.path.join (BASE_DIR,'artist_app/static'),
-     os.path.join (BASE_DIR,'admin_app/static'),
-     os.path.join (BASE_DIR,'seller_app/static')
+     os.path.join (BASE_DIR,'admin_app/static')
 ]
+
+MEDIA_ROOT =os.path.join(BASE_DIR,'media')
+MEDIA_URLS='/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

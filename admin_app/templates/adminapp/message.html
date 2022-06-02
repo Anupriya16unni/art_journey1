@@ -22,31 +22,43 @@
     <thead>
       <tr>
         <th scope="col">ID</th>
+        <th scope="col">Name</th>
         <th scope="col">Email</th>
         <th scope="col">Massage</th>
         <th scope="col">Status</th>
       </tr>
     </thead>
     <tbody>
+      {% for d in contact %}
       <tr>
-        <th scope="row">1</th>
-        <td>athirac1503@gmail.com</td>
-        <td>site was blocked in 2 hours</td>
+        <th scope="row"></th>
+        <td>{{forloop.contact_id}}</td>
+        <td>{{d.name|capfirst}}</td>
+        <td>{{d.email}}</td>
         <td><a class="btn btn-dark" href="{% url 'reply' %}">view</a></td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>anu1567@gmail.com</td>
-        <td>can't reach the site</td>
-        <td><a class="btn btn-dark" href="{% url 'reply' %}">view</a></td>
-      </tr>
-      <tr> <th scope="row">3</th>
-        <td>sree1503@gmail.com</td>
-        <td>I can't see my drawings</td>
-        <td><a class="btn btn-dark" href="{% url 'reply' %}">view</a></td>
-      </tr>
-    
+
+      {% endfor %}
+     
     </tbody>
   </table>
+
+  <nav aria-label="Page navigation example" style="padding-left: 680px;">
+    <ul class="pagination">
+      <li class="page-item">
+        <a style="color: black;"class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a style="color: black;" class="page-link" href="#">1</a></li>
+      <li class="page-item"><a style="color: black;" class="page-link" href="#">2</a></li>
+      <li class="page-item"><a style="color: black;" class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a style="color: black;" class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+</nav>
 
 {% endblock %}

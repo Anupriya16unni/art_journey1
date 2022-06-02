@@ -51,7 +51,7 @@ body {
     font-size: 16px;
     color: #333;
 }
-#login-form p a {
+#login-form p .a {
     color: #00bcd4;
 }
 #login-form label {
@@ -72,7 +72,7 @@ body {
     padding: 0 5px;
     height: 40px;
 }
-.input-box span::before{
+.input-box .span::before{
     content: attr(data-placeholder);
     position: absolute;
     top: 50%;
@@ -82,7 +82,7 @@ body {
     z-index: -1;
     transition: .5s;
 }
-.input-box span::after{
+.input-box .span::after{
     content: '';
     position: absolute;
     width: 0%;
@@ -90,10 +90,10 @@ body {
     background: linear-gradient(120deg,#2196F3,#FF5722);
     transition: .5s;
 }
-.focus + span::before{
+.focus + .span::before{
     top: -5px;
 }
-.focus + span::after{
+.focus + .span::after{
     width: 100%;
 }
 .login-btn {
@@ -130,23 +130,21 @@ body {
 
 </style>
 <body>
-  <form action="" id="login-form">
-      <!-- <h1 class="fw-bold">Login</h1> -->
+  <form action="" id="login-form" method='POST'>
+    {% csrf_token %}
       <div class="input-box">
-          <input type="text">
-          <span data-placeholder="Username"></span>
+          <input class="span" type="text" name="email" placeholder="Email id">
       </div>
 
       <div class="input-box">
-          <input type="password">
-          <span data-placeholder="Password"></span>
+          <input class="span" name="pass" type="password" placeholder="password">
       </div>
       <label>
         <input type="checkbox" name="remember"> Remember me
       </label>
 
-      <button type="submit" class="login-btn"><a class="login" href="{% url 'home' %}">Login</a></button>
-
+      <button type="submit" class="login-btn login .a">Login</button>
+      {{error}}
       <a class="forget" href="">Forgot password</a>
 
       <div class="bottom-links">

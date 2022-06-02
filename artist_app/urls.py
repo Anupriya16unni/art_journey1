@@ -1,5 +1,6 @@
 from django.urls import path
 from .import views
+app_name="artist"
 
 urlpatterns =[
 
@@ -9,11 +10,10 @@ urlpatterns =[
     path('view_stock',views.view_stock,name="view_stock"),
     path('login_security',views.login_security,name="login_security"),
     path('artist_home',views.artist_home,name="artist_home"),
-    path('artist_login',views.artist_login,name="artist_login"),
+    path('',views.artist_login,name="artist_login"),
     path('order_management',views.order_management,name="order_management"),
-    path('pending',views.pending,name="pending"),
-    path('processed',views.processed,name="processed")
-
+    path('artist_logout',views.artist_logout,name="artist_logout"),
+    path('change_password',views.change_password,name="change_password")
 
     
 ]

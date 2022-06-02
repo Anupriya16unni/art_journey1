@@ -11,8 +11,8 @@
 .bi{
     padding-left: 30px;
 }
-h5 p{
-    padding-left: 30px;
+h5{
+    padding-bottom: 30px;
 }
 .form-control{
     width: 400px;
@@ -33,15 +33,19 @@ h5 p{
     margin-left: 20px;
     margin-top: 20px;
     font-weight: bold;
-
+}
+#sign{
+  margin-top: 50px;
+}
+.dropdown{
+  margin-top: 20px;
 }
 </style>
   
       
       <i class="bi bi-person-circle ml-5" style="font-size: 3rem;"></i>
       <h1 >Profile</h1><hr>
-      <h5 class="ml-5">Anupriya o</h5>
-      <p class="ml-5">anu1503@gmail.com</p>
+      <h5 class="ml-5">{{ profile.username| upper }}</h5>
       <form class="row g-3">
         <div class="col-md-6">
           <input type="text" class="form-control" id="inputFname4" placeholder="First Name">
@@ -62,9 +66,9 @@ h5 p{
         <div class="dropdown col-6 radio1">
           <label for="">Gender: </label>&nbsp;&nbsp;&nbsp;&nbsp;
           <label for="">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="radio" id="gender">&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="gender" id="Female">&nbsp;&nbsp;&nbsp;&nbsp;
           <label for="">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="radio" id="gender">&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="gender" id="Male">&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
        
         <div class="col-12">

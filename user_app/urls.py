@@ -2,18 +2,19 @@ from unicodedata import name
 from django.urls import path
 from .import views
 
-urlpatterns =[
+urlpatterns = [
 
-    # path('index',views.index,name="index"),
-    path('contact',views.contact,name="contact"),
-    path('login',views.login,name="login"),
-    path('signup',views.signup,name="signup"),
-    path('about',views.about,name="about"),
-    # path('uhome',views.uhome,name="uhome"),
-    path('',views.home,name="home"),
-    path('drawing',views.drawing,name="drawing"),
-    path('user_profile',views.user_profile,name="user_profile"),
-    path('user_login_security',views.user_login_security,name="user_login_security"),
-    path('user_address',views.user_address,name="user_address")
-    
+    path('contact', views.contact, name="contact"),
+    path('login', views.login, name="login"),
+    path('signup', views.signup, name="signup"),
+    path('about', views.about, name="about"),
+    path('', views.home, name="home"),
+    path('drawing', views.drawing, name="drawing"),
+    path('user_profile', views.user_profile, name="user_profile"),
+    path('user_login_security', views.user_login_security, name="user_login_security"),
+    path('user_address', views.user_address, name="user_address"),
+    path('cart/<int:pid>',views.add_cart,name="addToCart"),
+    path('cart',views.view_cart,name="view_cart"),
+    path('logout', views.logout, name="logout"),
+    path('artist_details', views.artist_details, name="artist_details")
 ]

@@ -3,148 +3,160 @@
 {% block artist_content %}
 
 <style>
-    h1{
-      font-family: 'Times New Roman', Times, serif;
-      background: #121FCF;
-      background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-      background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-      background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-align: center;
-      padding-top: 15px;
-      font-weight: bolder;
-      margin-bottom: 30px;
+ 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
-    * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;	
-	font-family: Raleway, sans-serif;
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 0 12px 0;
 }
-
-body {
-  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
 }
-
-.container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
-
-.screen {		
-	background: linear-gradient(90deg, #e1e1e6, #7C78B8);		
-	position: relative;	
-	height: 450px;
-	width: 800px;
-  margin-bottom: 150px;	
-	box-shadow: 0px 0px 24px #5C5696;
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
 }
-
-/* .screen__content {
-	z-index: 1;
-	position: relative;	
-	height: 100%;
-} */
-
-/* .screen__background {		
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 0;
-	-webkit-clip-path: inset(0 0 0 0);
-	clip-path: inset(0 0 0 0);	
-} */
-
-/* .screen__background__shape {
-	transform: rotate(45deg);
-	position: absolute;
-} */
-
-/* .screen__background__shape1 {
-	height: 520px;
-	width: 520px;
-	background: #FFF;	
-	top: -50px;
-	right: 120px;	
-	border-radius: 0 72px 0 0;
-} */
-
-/* .screen__background__shape2 {
-	height: 220px;
-	width: 220px;
-	background: #6C63AC;	
-	top: -172px;
-	right: 0;	
-	border-radius: 32px;
-} */
-
-/* .screen__background__shape3 {
-	height: 540px;
-	width: 190px;
-	background: linear-gradient(270deg, #5D54A4, #6A679E);
-	top: -24px;
-	right: 0;	
-	border-radius: 32px;
-} */
-
-/* .screen__background__shape4 {
-	height: 400px;
-	width: 200px;
-	background: #7E7BB9;	
-	top: 420px;
-	right: 50px;	
-	border-radius: 60px;
-} */
-
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  transform: scale(0.99);
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
 </style>
+<body>
 
-<div class="container">
-  
-	<div class="screen">
-		<div class="screen__content">
-      <h1>GALLERIA</h1>
-			
-		</div>
-      <div>
-        <form action="">
-          <table>
-            <tr>
-              <td><label for="" >Product Name : </label></td>
-              <td><input type="text"></td>
-            </tr>
-            <tr>
-              <td><label for="">Product Rate : </label></td>
-              <td><input type="text"></td>
-            </tr>
-            <tr>
-              <td><label for="">Product details</label></td>
-              <td><textarea name="" id="" style="width: 190px;"></textarea> </td>
-            </tr>
-            <tr>
-              <td><label for="formFile" class="form-label">Upload picture </label></td>
-              <td><input class="form-control" type="file" id="formFile"></td>
-            </tr>
-          <tr>
-            <td><a id="btn1" class="btn btn-primary" href="">Upload</a></td>
-          </tr>  
-      </table>
-        </form>
-      </div>
-      
-    </div>
-		<!-- <div class="screen__background">
-			<span class="screen__background__shape screen__background__shape4"></span>
-			<span class="screen__background__shape screen__background__shape3"></span>		
-			<span class="screen__background__shape screen__background__shape2"></span>
-			<span class="screen__background__shape screen__background__shape1"></span>
-		</div>		 -->
-	</div>
-</div>
-
+    <div class="container">
+        <div class="title text-center" style="font-weight: bold; font-size: 35px; font-family: 'Times New Roman', Times, serif; padding-top: 50px;" >ADD PRODUCT</div>
+        <div class="content">
+          <form action="#" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Product Name</span>
+                <input type="text" name="p_name"  >
+              </div>
+              <div class="input-box">
+                <span class="details">description</span>
+                <input type="details" name="p_desc">
+              </div>
+              
+              <div class="input-box">
+                <span class="details">Stock Available</span>
+                <input type="text"  name="p_stock" >
+              </div>
+              <div class="input-box">
+                <span class="details">Price</span>
+                <input type="text" name="p_price" >
+              </div>
+              <div class="input-box">
+                <span class="details">Upload Image</span>
+                <input type="file" name="p_img">
+              </div>
+             
+            </div>
+            <div>
+              <button type="submit" style="width: 200px;" class="btn btn-secondary">ADD</button>
+              </div>
+            </form>
+          </div>
+        </div>
+  </body>
+  </html>
 
 {% endblock %}

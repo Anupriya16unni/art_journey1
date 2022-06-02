@@ -1,0 +1,85 @@
+{% extends 'adminapp/admin_master.html' %}
+{% load static %}
+{% block admin_content %}
+<style>
+    h1{
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;   
+    padding-top: 40px   ; 
+}
+.table{
+    margin-top: 60px;
+    background-color: rgba(255, 253, 253, 0.4);
+    width: 900px;
+    /* margin-left: 49px; */
+}
+
+</style>
+
+<h1>VIEW FEEDBACK</h1>
+<table class="table shadow">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Seller Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Age</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Message</th>
+        <th scope="col">Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Arjun</td>
+        <td>arju@gmail.com</td>
+        <td>22</td>
+        <td>8976542345</td>
+        <td>ddhggkjlm,mfnkrjhrm</td>
+        <td>good</td>
+      </tr>
+
+      <tr>
+        <th scope="row">2</th>
+        <td>Amal</td>
+        <td>amal@gmail.com</td>
+        <td>24</td>
+        <td>8976542345</td>
+        <td>ddhggkjlm,mfnkrjhrm</td>
+        <td>bad</td>
+      </tr>
+
+      <tr>
+        <th scope="row">3</th>
+        <td>Aju</td>
+        <td>aju@gmail.com</td>
+        <td>20</td>
+        <td>8976542345</td>
+        <td>ddhggkjlm,mfnkrjhrm</td>
+        <td>average</td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+  <nav aria-label="Page navigation example" style="padding-left: 720px;">
+    <ul class="pagination">
+      <li class="page-item">
+        <a style="color: black;"class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a style="color: black;" class="page-link" href="#">1</a></li>
+      <li class="page-item"><a style="color: black;" class="page-link" href="#">2</a></li>
+      <li class="page-item"><a style="color: black;" class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a style="color: black;" class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+</nav>
+
+{% endblock %}
