@@ -1,7 +1,7 @@
-from pyexpat import model
+
 from django.db import models
 
-from admin_app.views import message
+
 from artist_app.models import Product
 
 # Create your models here.
@@ -16,19 +16,19 @@ class ArtUser(models.Model):
     class Meta:
         db_table="user_art"
 
-class ContactUs(models.Model):
-    name=models.CharField(max_length=20)
-    email=models.CharField(max_length=100)
-    phone=models.BigIntegerField()
-    message=models.CharField(max_length=100)
-    contact_id=models.ForeignKey(ArtUser,on_delete=models.CASCADE,null=True,default='')
+# class ContactUs(models.Model):
+#     name=models.CharField(max_length=20)
+#     email=models.CharField(max_length=100)
+#     phone=models.BigIntegerField()
+#     message=models.CharField(max_length=100)
+#     contact_id=models.ForeignKey(ArtUser,on_delete=models.CASCADE)
 
-    class Meta:
-        db_table="contact_us"
+#     class Meta:
+#         db_table="contact_us"
 
-class Cart(models.Model):
-    product=models.ForeignKey(Product,on_delete=models.CASCADE)
-    user=models.ForeignKey(ArtUser,on_delete=models.CASCADE)
+# class Cart(models.Model):
+#     product=models.ForeignKey(Product,on_delete=models.CASCADE)
+#     user=models.ForeignKey(ArtUser,on_delete=models.CASCADE)
 
-    class Meta:
-        db_table='cart'
+#     class Meta:
+#         db_table='cart'

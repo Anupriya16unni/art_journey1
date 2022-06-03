@@ -16,5 +16,6 @@ urlpatterns = [
     path('cart/<int:pid>',views.add_cart,name="addToCart"),
     path('cart',views.view_cart,name="view_cart"),
     path('logout', views.logout, name="logout"),
+    path('delete_cart',views.delete_cart,name="delete_cart"),
     path('artist_details', views.artist_details, name="artist_details")
 ]

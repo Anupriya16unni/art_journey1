@@ -1,7 +1,6 @@
-from unicodedata import category
 from django.db import models
 
-from user_app.views import about
+
 
 # Create your models here.
 
